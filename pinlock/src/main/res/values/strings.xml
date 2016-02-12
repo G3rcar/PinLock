@@ -1,6 +1,10 @@
 <resources>
-    <string name="app_name">PinLockLibrary</string>
+    <string name="app_name">PinLock Library</string>
     <string name="enter_pin">Enter PIN</string>
+    <string name="invalid_pin">Invalid PIN. Try again</string>
     <string name="cancel">Cancel</string>
     <string name="forgot">Forgot PIN</string>
+    <string name="enter_new_pin">Enter new PIN</string>
+    <string name="re_enter_pin">Confirm PIN</string>
+    <string name="pin_mismatch">PIN mismatch. Try again</string>
 </resources>

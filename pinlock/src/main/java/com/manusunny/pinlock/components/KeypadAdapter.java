@@ -20,7 +20,6 @@ package com.manusunny.pinlock.components;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
-import android.graphics.drawable.TransitionDrawable;
 import android.os.Vibrator;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -109,9 +108,6 @@ public class KeypadAdapter extends BaseAdapter {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                int duration = styledAttributes.getInt(R.styleable.PinLock_keypadClickAnimationDuration, 100);
-                TransitionDrawable transition = (TransitionDrawable) v.getBackground();
-                transition.startTransition(duration);
 
                 final int pinLength = styledAttributes.getInt(R.styleable.PinLock_pinLength, 4);
                 Button key = (Button) v;
@@ -124,7 +120,7 @@ public class KeypadAdapter extends BaseAdapter {
                     pinListener.onCompleted(currentPin);
                     Keypad.resetPin();
                 }
-                transition.reverseTransition(duration);
+
             }
         });
         return view;

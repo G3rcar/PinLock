@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Librería PinLock</string>
+    <string name="enter_pin">Ingrese el PIN</string>
+    <string name="cancel">Cancelar</string>
+    <string name="forgot">Olvidé mi PIN</string>
+    <string name="enter_new_pin">Ingrese un nuevo PIN</string>
+    <string name="invalid_pin">PIN inválido. Intente de nuevo</string>
+    <string name="pin_mismatch">El PIN no coincide. Intente de nuevo</string>
+    <string name="re_enter_pin">Confirme el PIN</string>
+</resources>

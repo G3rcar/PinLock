@@ -54,10 +54,24 @@ public abstract class BasePinActivity extends Activity implements PinListener {
     private TextView forgetButton;
     private TextView cancelButton;
 
+
+    /**
+     * Messages in use with locale
+     */
+    protected String TEXT_FIRST_TRY;
+    protected String TEXT_PIN_INVALID;
+
+    protected String TEXT_FIRST_TRY_NEW;
+    protected String TEXT_CONFIRM_PIN;
+    protected String TEXT_PIN_MISMATCH;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pin);
+        fillMessages();
         Keypad keypad = (Keypad) findViewById(R.id.keypad);
         keypad.setPinListener(this);
 
@@ -66,6 +80,18 @@ public abstract class BasePinActivity extends Activity implements PinListener {
 
         setupButtons();
         setupStyles();
+    }
+
+    /**
+     * Getting strings from resources to allow translation
+     */
+    private void fillMessages() {
+        TEXT_FIRST_TRY = getString(R.string.enter_pin);
+        TEXT_PIN_INVALID = getString(R.string.invalid_pin);
+
+        TEXT_FIRST_TRY_NEW = getString(R.string.enter_new_pin);
+        TEXT_CONFIRM_PIN = getString(R.string.re_enter_pin);
+        TEXT_PIN_MISMATCH = getString(R.string.pin_mismatch);
     }
 
 
