@@ -21,6 +21,7 @@ import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.os.Vibrator;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -145,8 +146,9 @@ public class KeypadAdapter extends BaseAdapter {
      * @param view Button itself
      */
     private void setStyle(Button view) {
-        final int textSize = styledAttributes.getDimensionPixelOffset(R.styleable.PinLock_keypadTextSize, 20);
-        view.setTextSize(textSize);
+        //final int textSize = styledAttributes.getInt(R.styleable.PinLock_keypadTextSize, 20);
+        final int textSizeNew = styledAttributes.getInt(R.styleable.PinLock_keypadTextSizeSp, 12);
+        view.setTextSize(TypedValue.COMPLEX_UNIT_SP,textSizeNew);
 
         final int color = styledAttributes.getColor(R.styleable.PinLock_keypadTextColor, Color.BLACK);
         view.setTextColor(color);
